@@ -1,28 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 0. AUTO-INJECT CSS FOR PROFESSIONAL LOADER ---
-    // Ye magic code button ke andar spinner banayega
     const styleSheet = document.createElement("style");
     styleSheet.innerText = `
         /* Loader ka design */
         .button-loader {
-            border: 3px solid rgba(255, 255, 255, 0.3); /* Halka border */
-            border-top: 3px solid #ffffff; /* Gada border upar (jo ghumega) */
-            border-radius: 50%; /* Golakar */
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #ffffff;
+            border-radius: 50%;
             width: 20px;
             height: 20px;
-            animation: spin-loader 0.8s linear infinite; /* Ghumne ki speed */
-            margin: auto; /* Center me */
+            animation: spin-loader 0.8s linear infinite;
+            margin: auto;
             display: block;
         }
 
-        /* Ghumne ki animation */
         @keyframes spin-loader {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        /* Jab loading ho rhi ho to cursor change na ho */
         button:disabled {
             cursor: not-allowed;
             opacity: 0.8;
@@ -34,19 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. ICONS INITIALIZE ---
     lucide.createIcons();
 
-    // --- 2. THEME TOGGLE LOGIC ---
+    // --- 2. THEME TOGGLE LOGIC (FIXED: Sun & Moon) ---
     const themeToggle = document.querySelector('.theme-toggle');
     const body = document.body;
-    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
+    // Check saved theme and set initial icon
     const currentTheme = localStorage.getItem('theme') || 'dark';
     if (currentTheme === 'dark') {
         body.classList.add('dark');
-        if(themeIcon) themeIcon.setAttribute('data-lucide', 'sun');
+        if(themeToggle) themeToggle.innerHTML = '<i data-lucide="sun"></i>';
     } else {
         body.classList.remove('dark');
-        if(themeIcon) themeIcon.setAttribute('data-lucide', 'moon');
+        if(themeToggle) themeToggle.innerHTML = '<i data-lucide="moon"></i>';
     }
+    // Render initial theme icon
     lucide.createIcons();
 
     if (themeToggle) {
@@ -54,24 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.toggle('dark');
             const isDark = body.classList.contains('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            if(themeIcon) themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            
+            // JAB BHI CLICK HO, NAYA ICON DAALO AUR RENDER KARO
+            themeToggle.innerHTML = `<i data-lucide="${isDark ? 'sun' : 'moon'}"></i>`;
             lucide.createIcons();
         });
     }
 
-    // --- 3. MOBILE MENU ---
+    // --- 3. MOBILE MENU (FIXED: 3 Taps & Icon Change) ---
     const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (mobileMenuBtn && navLinks) {
+    if (mobileMenuBtn && mobileMenu) {
+        let isMenuOpen = false; 
+        
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const isOpen = navLinks.classList.contains('active');
-            const menuIcon = mobileMenuBtn.querySelector('i');
-            if(menuIcon) {
-                menuIcon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+            isMenuOpen = !isMenuOpen; 
+            
+            // Menu ko dikhao ya chupao
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
+            
+            // Icon ko Menu se 'X' (Cross) banao aur render karo
+            mobileMenuBtn.innerHTML = `<i data-lucide="${isMenuOpen ? 'x' : 'menu'}"></i>`;
+            lucide.createIcons();
+        });
+
+        // Mobile mein kisi link pe click karne pe menu khud band ho jaye
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
                 lucide.createIcons();
-            }
+            });
         });
     }
 
@@ -90,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 2. Button ko disable karo aur Loader dikhao
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<div class="button-loader"></div>'; // LOADER INSERTED HERE
+            submitBtn.innerHTML = '<div class="button-loader"></div>';
 
             const formParams = new URLSearchParams(new FormData(contactForm));
 
@@ -117,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 3. Wapas purana content lao aur button enable karo
                 submitBtn.innerHTML = originalContent;
                 submitBtn.disabled = false;
-                // Zaroori: Kyunki humne HTML replace kiya tha, icons ko dobara load karna padega
                 lucide.createIcons(); 
             }
         });
