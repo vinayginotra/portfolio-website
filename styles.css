@@ -2104,53 +2104,14 @@ footer {
 
 
 };
-/* --- AI EXPERTISE CARD DESIGN --- */
-.ai-special-card {
-    background: linear-gradient(145deg, rgba(139, 92, 246, 0.05), transparent);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    border-left: 4px solid #8b5cf6; /* Purple tech accent */
-    padding: 24px;
-    border-radius: 12px;
-    margin: 20px 0;
-    transition: all 0.3s ease;
-}
- 
-.ai-special-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
-}
- 
-.ai-card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    color: #8b5cf6;
-}
- 
-.ai-card-header h3 {
-    margin: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1f2937; /* Dark text for light mode */
-}
- 
-.ai-special-card p {
-    margin: 0;
-    line-height: 1.6;
-    color: #4b5563;
-}
- 
-/* Dark Mode Support (Kyunki humne dark mode fix kiya tha) */
-body.dark .ai-special-card {
-    background: linear-gradient(145deg, rgba(139, 92, 246, 0.1), rgba(0, 0, 0, 0.2));
-    border: 1px solid rgba(139, 92, 246, 0.4);
-}
- 
-body.dark .ai-card-header h3 {
-    color: #f3f4f6; /* White text for dark mode */
-}
- 
-body.dark .ai-special-card p {
-    color: #d1d5db;
-}
+        <div class="skill-category" style="grid-column: 1 / -1; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);">
+            <div class="skill-header">
+                <div class="skill-icon" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.15);">
+                    <i data-lucide="bot"></i>
+                </div>
+                <h3 class="skill-title" style="color: #8b5cf6;">Tech-Forward Finance Leadership</h3>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">
+                <strong style="color: #8b5cf6;">Generative AI Mastermind:</strong> Merging core financial expertise with modern technology. Leveraging AI Bots, GPTs, and advanced analytics to optimize financial workflows, automate reporting, and enhance team productivity.
+            </p>
+        </div>
