@@ -2102,8 +2102,6 @@ footer {
     transform: translateY(-3px);
 }
 
-
-};
         <div class="skill-category" style="grid-column: 1 / -1; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);">
             <div class="skill-header">
                 <div class="skill-icon" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.15);">
@@ -2115,3 +2113,4 @@ footer {
                 <strong style="color: #8b5cf6;">Generative AI Mastermind:</strong> Merging core financial expertise with modern technology. Leveraging AI Bots, GPTs, and advanced analytics to optimize financial workflows, automate reporting, and enhance team productivity.
             </p>
         </div>
+};
