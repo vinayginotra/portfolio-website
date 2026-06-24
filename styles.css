@@ -2113,4 +2113,12 @@ footer {
 body:not(.dark) .ai-text {
     color: #374151 !important; 
 }
+    /* AI Card Text Color (Light & Dark Mode Auto-Switch) */
+.ai-desc { 
+    color: #4b5563; /* Light mode ke liye dark grey */
+}
+
+body.dark .ai-desc { 
+    color: #e5e7eb; /* Dark mode ke liye light grey/white */
+}
 };
