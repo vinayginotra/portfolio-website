@@ -2101,16 +2101,16 @@ footer {
 #scrollTopBtn:hover {
     transform: translateY(-3px);
 }
+.ai-text {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    color: #e5e7eb !important; /* Ye text ko light grey/white kar dega */
+}
 
-        <div class="skill-category" style="grid-column: 1 / -1; border: 1px solid rgba(139, 92, 246, 0.4); box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);">
-            <div class="skill-header">
-                <div class="skill-icon" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.15);">
-                    <i data-lucide="bot"></i>
-                </div>
-                <h3 class="skill-title" style="color: #8b5cf6;">Tech-Forward Finance Leadership</h3>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">
-                <strong style="color: #8b5cf6;">Generative AI Mastermind:</strong> Merging core financial expertise with modern technology. Leveraging AI Bots, GPTs, and advanced analytics to optimize financial workflows, automate reporting, and enhance team productivity.
-            </p>
-        </div>
+/* Agar light mode bhi hai, toh uske liye black text */
+body:not(.dark) .ai-text {
+    color: #374151 !important; 
+}
 };
