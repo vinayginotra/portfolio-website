@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 4. CONTACT FORM (PROFESSIONAL LOADER FIX) ---
     const contactForm = document.getElementById('contact-form');
-    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwOF_VcUooa_VZcoWz3xfmLbVCGqy_RzlAvnHCHuvvUPHRsGen_FGdMktpkwuzLJ1rh_g/exec';
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwlsitoXKNAnbdT7g6siIyUt2ZBlgqrOycxIFf192ClHI3mSVEh8AuzT5uQP3AjXK_7/exec';
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
