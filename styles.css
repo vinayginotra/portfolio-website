@@ -2162,4 +2162,13 @@ body.dark .hero-stat-card p{
     color:#d1d5db;
 
 }
+    @media(max-width:768px){
+
+.hero-stats{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
 };
