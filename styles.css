@@ -2259,17 +2259,17 @@ right:0;
 
 bottom:0;
 
-padding:28px;
-color:#ffffff;  
+    padding:40px 32px 28px;color:#ffffff;  
     font-size:2.1rem;
         font-weight:700;
         margin-bottom:20px;
-    backdrop-filter:blur(8px);
-background:linear-gradient(
-        to top,
-        rgba(5,10,20,.95) 0%,
-        rgba(5,10,20,.75) 45%,
-        rgba(5,10,20,0) 100%
+    background: linear-gradient(
+    to top,
+    rgba(5,10,20,.92) 0%,
+    rgba(5,10,20,.75) 35%,
+    rgba(5,10,20,.25) 60%,
+    transparent 100%
+);
     );
 
 opacity:0;    
