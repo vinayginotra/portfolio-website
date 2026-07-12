@@ -2113,6 +2113,7 @@ footer {
 body:not(.dark) .ai-text {
     color: #374151 !important; 
 }
+}
     /* ===========================
    HERO KPI BAR
 =========================== */
@@ -2220,4 +2221,3 @@ color:#60a5fa;
 text-shadow:0 0 18px rgba(96,165,250,.5);
 
 }
-};
