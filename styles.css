@@ -350,13 +350,13 @@ body.dark .hero {
 }
 
 .hero-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 48px;
-    align-items: center;
-    padding: 20px 0 60px; 
-    position: relative;
-    z-index: 1;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:90px;
+    align-items:center;
+    padding:20px 0 60px;
+    position:relative;
+    z-index:1;
 }
 
 .hero-subtitle {
@@ -397,6 +397,7 @@ body.dark .hero-description {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 16px;
+    max-width:760px;
     padding: 32px;
     margin-bottom: 32px;
 }
@@ -556,10 +557,10 @@ body.dark .social-link:hover {
 }
 
 .profile-image {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 22px;
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1964,7 +1965,8 @@ body.dark .footer {
     }
     
     .hero-content {
-        grid-template-columns: 1fr 1fr;
+grid-template-columns:1.15fr .85fr;
+        gap:100px;
     }
     
     .hero-actions {
@@ -2220,14 +2222,17 @@ color:#60a5fa;
 
 text-shadow:0 0 18px rgba(96,165,250,.5);
 
-}
-.hero-image{
+}.hero-image{
 
 display:flex;
 
-justify-content:center;
+justify-content:flex-end;
+
+align-items:center;
 
 perspective:1200px;
+
+padding-left:40px;
 
 }
 .profile-card{
@@ -2260,7 +2265,7 @@ right:0;
 
 bottom:0;
 
-padding:26px;
+padding:28px;
 
 background:linear-gradient(
 
@@ -2271,12 +2276,11 @@ rgba(10,15,29,0),
 rgba(10,15,29,.96)
 
 );
+opacity:0;    
 
-transform:translateY(100%);
+transform:translateY(35px);
 
-transition:.45s ease;
-
-color:white;
+transition:.45s;
 
 }
 .image-container:hover .profile-overlay{
@@ -2285,8 +2289,9 @@ transform:translateY(0);
 
 }
 .image-container:hover .profile-image{
+opacity:1;    
 
-transform:scale(1.06);
+transform:translateY(0);
 
 }
 .profile-image{
@@ -2337,22 +2342,29 @@ background:rgba(255,255,255,.15);
 
 backdrop-filter:blur(12px);
 
-padding:8px 14px;
+padding:10px 16px;
 
 border-radius:999px;
 
-font-size:12px;
+font-size:13px;
 
 display:flex;
 
-gap:6px;
+gap:8px;
 
 align-items:center;
 
-color:white;
+color:#fff;
 
 transition:.3s;
 
+opacity:.85;
+
 }
-    opacity:0;
+.image-container:hover .hover-badge{
+
+opacity:1;
+
+transform:scale(1.05);
+
 }
