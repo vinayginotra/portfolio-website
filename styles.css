@@ -2113,4 +2113,111 @@ footer {
 body:not(.dark) .ai-text {
     color: #374151 !important; 
 }
+    /* ===========================
+   HERO KPI BAR
+=========================== */
+
+.hero-kpi{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+margin-top:45px;
+
+padding:28px 0;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.kpi-item{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+flex:1;
+
+}
+
+.kpi-number{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#4ea8ff;
+
+line-height:1;
+
+margin-bottom:10px;
+
+}
+
+.kpi-label{
+
+font-size:14px;
+
+color:#cbd5e1;
+
+text-align:center;
+
+line-height:1.5;
+
+}
+
+.kpi-divider{
+
+width:1px;
+
+height:55px;
+
+background:rgba(255,255,255,.12);
+
+}
+    @media(max-width:768px){
+
+.hero-kpi{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.kpi-divider{
+
+display:none;
+
+}
+
+}
+    .kpi-item{
+
+transition:.35s;
+
+}
+
+.kpi-item:hover{
+
+transform:translateY(-6px);
+
+}
+
+.kpi-item:hover .kpi-number{
+
+color:#60a5fa;
+
+text-shadow:0 0 18px rgba(96,165,250,.5);
+
+}
 };
