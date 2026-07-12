@@ -2262,8 +2262,9 @@ bottom:0;
     padding:40px 32px 28px;color:#ffffff;  
     font-size:1.8rem;
         font-weight:700;
-        line-height:1.1;
-        margin-bottom:24px;
+        line-height:1.15;
+        margin-bottom:28px;
+    max-width:85%;
     letter-spacing:-0.02em;
     background: linear-gradient(
     to top,
