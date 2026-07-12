@@ -536,10 +536,6 @@ body.dark .social-link:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-}
 
 .image-container {
     position: relative;
@@ -557,10 +553,11 @@ body.dark .social-link:hover {
 }
 
 .profile-image {
-    width: 500px;
-    height: 500px;
+    width: 430px;
+    height: 430px;
     object-fit: cover;
     border-radius: 22px;
+    transition:.45s ease;
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2284,19 +2281,13 @@ transition:.45s;
 
 }
 .image-container:hover .profile-overlay{
+opacity:1;
 
 transform:translateY(0);
 
-}
-.image-container:hover .profile-image{
-opacity:1;    
+}.image-container:hover .profile-image{
 
-transform:translateY(0);
-
-}
-.profile-image{
-
-transition:.45s ease;
+transform:scale(1.06);
 
 }
 .overlay-title{
