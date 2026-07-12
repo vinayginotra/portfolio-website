@@ -2149,4 +2149,17 @@ body:not(.dark) .ai-text {
     font-size:14px;
     color:#6b7280;
 }
+    body.dark .hero-stat-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+body.dark .hero-stat-card p{
+
+    color:#d1d5db;
+
+}
 };
