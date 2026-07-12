@@ -2259,7 +2259,7 @@ right:0;
 
 bottom:0;
     justify-content:flex-end;
-    padding:40px 32px 28px;color:#ffffff;  
+    padding:42px 38px 28px;color:#ffffff;  
     font-size:1.8rem;
         font-weight:700;
         line-height:1.15;
@@ -2288,6 +2288,7 @@ opacity:1;
 transform:translateY(0);
 
 }.image-container:hover .profile-image{
+    object-position:58% center;
 
 transform:scale(1.06);
 
@@ -2302,6 +2303,7 @@ margin-bottom:18px;
 
 }
 .overlay-stat{
+    margin-top:12px
 
 display:flex;
 
